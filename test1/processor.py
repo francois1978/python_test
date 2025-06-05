@@ -5,7 +5,7 @@ from test1.product_item import ProductItem
 
 class Processor():
 
-    def compute_count(self, product_items: List[ProductItem], count_per_customer) -> int:
+    def compute_count(self, product_items: List[ProductItem], count_per_customer: int) -> int:
         # Code to complete
 
         customer_matching_condition = set()
