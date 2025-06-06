@@ -14,5 +14,5 @@ class TestProcessor:
 
         #Write test code here
         processor = Processor()
-        result = processor.compute_count(ProductItemGeneratorForTest.generate_items(), 1)
+        result = processor.compute_count_short_solution(ProductItemGeneratorForTest.generate_items(), 1)
         assert result == 2
