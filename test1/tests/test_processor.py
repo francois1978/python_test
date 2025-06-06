@@ -17,7 +17,7 @@ class TestProcessor:
 
         #Write test code here
         processor = Processor()
-        result = processor.compute_count_optimized(ProductItemGeneratorForTest.generate_items_massively(), 1)
+        result = processor.compute_count_optimized(ProductItemGeneratorForTest.generate_items(), 1)
 
         # Calculate the end time and time taken
         end = time.time()
