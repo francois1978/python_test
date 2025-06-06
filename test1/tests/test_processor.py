@@ -1,3 +1,5 @@
+import time
+
 import pytest
 
 from test1.processor import Processor
@@ -11,8 +13,17 @@ class TestProcessor:
 
 
     def test_processor(self):
+        start = time.time()
 
         #Write test code here
         processor = Processor()
-        result = processor.compute_count_short_solution(ProductItemGeneratorForTest.generate_items(), 1)
+        result = processor.compute_count_optimized(ProductItemGeneratorForTest.generate_items_massively(), 1)
+
+        # Calculate the end time and time taken
+        end = time.time()
+        length = end - start
+
+        # Show the results : this can be altered however you like
+        print("It took", length, "seconds")
+
         assert result == 2

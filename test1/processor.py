@@ -6,10 +6,12 @@ from test1.product_item import ProductItem
 
 class Processor():
 
+    # this method not working
     def compute_count_short_solution(self, product_items: List[ProductItem], count_per_customer: int) -> int:
         filtered_list = list(filter(lambda item: item.category == "Book", product_items))
         counter: int = 0
-        for key, item_list in groupby(filtered_list, key=lambda item: item.customer_id):
+        for item_list in groupby(filtered_list, key=lambda item: item.customer_id):
+
             if len(list(item_list)) > count_per_customer:
                 counter += 1
         return counter
